@@ -5,4 +5,7 @@
     <string name="login_password">密码</string>
     <string name="login">登录</string>
     <string name="frustrated">忘记密码</string>
+
+    <string name="usernameError">用户名为空</string>
+    <string name="passwordError">密码为空</string>
 </resources>
