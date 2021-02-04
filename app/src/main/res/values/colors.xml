@@ -6,4 +6,8 @@
 
     <color name="colorPath">#00FFFFFF</color>
     <color name="colorTitle">#FFFF5722</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorLoading_text">#4CAF50</color>
 </resources>
