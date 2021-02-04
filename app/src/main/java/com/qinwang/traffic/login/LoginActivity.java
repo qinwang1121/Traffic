@@ -2,6 +2,7 @@ package com.qinwang.traffic.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qinwang.traffic.R;
+import com.qinwang.traffic.main.MainActivity;
 import com.qinwang.traffic.tools.LoadingDialog;
 import com.qinwang.traffic.tools.WindowAssistant;
 
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
     private static final String TAG = "LoginActivity";
 
     private LoadingDialog mLoadingDialog = null;
+    private LoginConstract.LoginPresenter mLoginPresenter;
 
     private WindowAssistant windowAssistant = new WindowAssistant();
     public int width, height;
@@ -52,8 +55,16 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
         ViewGroup.LayoutParams layoutParams = loginButton.getLayoutParams();
         layoutParams.width = (int)(width / 2);
 
+        mLoginPresenter = new LoginPresenterImpl(this);
+
         loginButton.setOnClickListener(this);
         amnesia_text.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        mLoginPresenter.onDestroy();
+        super.onDestroy();
     }
 
     @Override
@@ -95,12 +106,20 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
     }
 
     @Override
+    public void navigateToHome() {
+        startActivity(new Intent(this,
+                MainActivity.class));
+    }
+
+    @Override
     public void onClick(View view) {
-//        switch (view.getId()){
-//            case R.id.enter:
-//                break;
+        switch (view.getId()){
+            case R.id.enter:
+                mLoginPresenter.validateCredentials(userName_editText.getText().toString(),
+                        password_editText.getText().toString());
+                break;
 //            case  R.id.amnesia:
 //                break;
-//        }
+        }
     }
 }

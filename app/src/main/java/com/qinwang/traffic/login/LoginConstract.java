@@ -20,6 +20,8 @@ public interface LoginConstract {
         void hideLoading(String tag);//关闭加载动画
 
         void showToast(String msg);//显示提示
+
+        void navigateToHome();//跳转到Home
     }
 
     interface LoginModel{
