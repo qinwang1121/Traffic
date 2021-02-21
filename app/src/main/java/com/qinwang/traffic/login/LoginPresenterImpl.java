@@ -34,6 +34,7 @@ public class LoginPresenterImpl implements LoginConstract.LoginPresenter, LoginC
     public void onUserNameNUll() {
         if (mLoginView != null){
             mLoginView.usernameError();
+            mLoginView.hideLoading("");
         }
     }
 
@@ -41,6 +42,7 @@ public class LoginPresenterImpl implements LoginConstract.LoginPresenter, LoginC
     public void onPassWordNull() {
         if (mLoginView != null){
             mLoginView.passwordError();
+            mLoginView.hideLoading("");
         }
     }
 

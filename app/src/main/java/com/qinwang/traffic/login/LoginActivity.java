@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qinwang.traffic.R;
+import com.qinwang.traffic.forget.ForgetActivity;
 import com.qinwang.traffic.main.MainActivity;
 import com.qinwang.traffic.tools.LoadingDialog;
 import com.qinwang.traffic.tools.WindowAssistant;
@@ -118,8 +119,10 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
                 mLoginPresenter.validateCredentials(userName_editText.getText().toString(),
                         password_editText.getText().toString());
                 break;
-//            case  R.id.amnesia:
-//                break;
+            case  R.id.amnesia:
+                startActivity(new Intent(this,
+                        ForgetActivity.class));
+                break;
         }
     }
 }

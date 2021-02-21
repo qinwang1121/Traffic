@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.qinwang.traffic.main.home.HomFragment"
+        android:label="@string/menu_main"
+        tools:layout="@layout/hom_fragment" />
+    <fragment
+        android:id="@+id/menu_mistake"
+        android:name="com.qinwang.traffic.main.mistake.MistakeFragment"
+        android:label="@string/menu_mistake"
+        tools:layout="@layout/mistake_fragment" />
+    <fragment
+        android:id="@+id/menu_myself"
+        android:name="com.qinwang.traffic.main.myself.MyselfFragment"
+        android:label="@string/menu_myself"
+        tools:layout="@layout/myself_fragment" />
+</navigation>
