@@ -25,21 +25,20 @@ public class FeedbackModelImpl implements FeedbackConstract.FeedbackModel {
                 boolean error = false;
                 if (TextUtils.isEmpty(message)){
                     listener.onDescribeError(context.getString(R.string.feedback_describe_error));
-                    listener.onFail(context.getString(R.string.feedback_fail));
                     error = true;
                 }
                 if (TextUtils.isEmpty(Email)){
                     listener.onEmailError(context.getString(R.string.feedback_mail_null));
-                    listener.onFail(context.getString(R.string.feedback_fail));
                     error = true;
                 }
                 if (! TextUtils.isEmpty(Email) & !isEmail(Email)){
                     listener.onEmailError(context.getString(R.string.feedback_mail_error));
-                    listener.onFail(context.getString(R.string.feedback_fail));
                     error = true;
                 }
                 if (! error){
                     listener.onSuccess(context.getString(R.string.feedback_success));
+                }else {
+                    listener.onFail(context.getString(R.string.feedback_fail));
                 }
             }
         }, 2000);
