@@ -2,6 +2,7 @@ package com.qinwang.traffic.main.myself;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,9 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mylhyl.circledialog.CircleDialog;
 import com.qinwang.traffic.R;
+import com.qinwang.traffic.main.myself.feedback.FeedbackActivity;
+import com.qinwang.traffic.main.myself.safety.SafetyActivity;
 
-public class MyselfFragment extends Fragment {
+public class MyselfFragment extends Fragment implements View.OnClickListener, MyselfView {
 
     private MyselfViewModel mViewModel;
 
@@ -33,6 +37,63 @@ public class MyselfFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(MyselfViewModel.class);
         // TODO: Use the ViewModel
+
+        getView().findViewById(R.id.myself_safety)
+                .setOnClickListener(this);
+        getView().findViewById(R.id.myself_feedback)
+                .setOnClickListener(this);
+        getView().findViewById(R.id.myself_examine)
+                .setOnClickListener(this);
+        getView().findViewById(R.id.myself_out)
+                .setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.myself_safety:
+                startActivity(new Intent(getActivity(),
+                        SafetyActivity.class));
+                break;
+            case R.id.myself_feedback:
+                startActivity(new Intent(getActivity(),
+                        FeedbackActivity.class));
+                break;
+            case R.id.myself_examine:
+                showExamineDialog();
+                break;
+            case R.id.myself_out:
+                showExitDialog();
+                break;
+        }
+    }
+
+    @Override
+    public void showExamineDialog() {
+        new CircleDialog.Builder(getActivity())
+                .setTitle(getString(R.string.Dialog_title))
+                .setText(getString(R.string.Dialog_Examine_text))
+                .setPositive(getString(R.string.Dialog_true), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                })
+                .show();
+    }
+
+    @Override
+    public void showExitDialog() {
+        new CircleDialog.Builder(getActivity())
+                .setTitle(getString(R.string.Dialog_title))
+                .setText(getString(R.string.Dialog_text))
+                .setPositive(getString(R.string.Dialog_true), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        getActivity().finish();
+                    }
+                })
+                .setNegative(getString(R.string.Dialog_false),null)
+                .show();
+    }
 }

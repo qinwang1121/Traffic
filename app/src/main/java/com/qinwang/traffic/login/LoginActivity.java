@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
         ViewGroup.LayoutParams layoutParams = loginButton.getLayoutParams();
         layoutParams.width = (int)(width / 2);
 
-        mLoginPresenter = new LoginPresenterImpl(this);
+        mLoginPresenter = new LoginPresenterImpl(this, this);
 
         loginButton.setOnClickListener(this);
         amnesia_text.setOnClickListener(this);

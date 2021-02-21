@@ -3,4 +3,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.myself.MyselfFragment"/>
+    android:background="@color/colorMyselfBK"
+    tools:context=".main.myself.MyselfFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <com.qinwang.traffic.tools.CircleImageView
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:src="@drawable/myself_user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myself_realName_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="TextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/myself_userId_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/myself_safety"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="110dip"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:text="@string/myself_account"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dip"
+        android:layout_marginTop="160dip"
+        android:layout_weight="1"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/myself_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="161dip"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:text="@string/myself_feedback"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="211dip"
+        android:layout_weight="1"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/myself_examine"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="212dip"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:text="@string/myself_examine"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="262dip"
+        android:layout_weight="1"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/myself_out"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="@string/myself_exit"
+        android:textSize="30sp" />
+</FrameLayout>

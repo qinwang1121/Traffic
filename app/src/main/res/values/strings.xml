@@ -1,18 +1,54 @@
 <resources>
     <string name="app_name">Traffic</string>
 
+    <!-- LoginActivity -->
     <string name="login_userName">用户名</string>
     <string name="login_password">密码</string>
     <string name="login">登录</string>
     <string name="frustrated">忘记密码</string>
-
     <string name="usernameError">用户名为空</string>
     <string name="passwordError">密码为空</string>
 
+    <!-- MainActivity -->
     <string name="menu_mistake">违规</string>
     <string name="menu_main">Home</string>
     <string name="menu_myself">我的</string>
 
+    <!-- MistakeFragment -->
     <string name="menu_search">查询</string>
     <string name="menu_uploading">上传</string>
+
+    <!-- MyselfFragment -->
+    <string name="myself_account">账号管理</string>
+    <string name="myself_feedback">意见反馈</string>
+    <string name="myself_examine">版本检查</string>
+    <string name="myself_exit">退出登录</string>
+
+    <!-- CircleDialog -->
+    <string name="Dialog_title">提示</string>
+    <string name="Dialog_Examine_text">已是最新版本1.0</string>
+    <string name="Dialog_text">是否确定退出</string>
+    <string name="Dialog_feedback_number_error">字数已超过200</string>
+    <string name="Dialog_true">确定</string>
+    <string name="Dialog_false">取消</string>
+
+    <!-- LoadingDialog -->
+    <string name="Loading_loading">加载中…</string>
+    <string name="Loading_login">登录中…</string>
+    <string name="Loading_upload">上传中…</string>
+
+    <!-- FeedbackActivity -->
+    <string name="feedback_question">问题描述</string>
+    <string name="feedback_describe">描述不要超过200字</string>
+    <string name="feedback_number">字数：</string>
+    <string name="feedback_way">联系方式</string>
+    <string name="feedback_mail">填写邮箱</string>
+    <string name="feedback_feedback">提交反馈</string>
+
+    <string name="feedback_describe_error">请填写反馈意见</string>
+    <string name="feedback_mail_null">请填写邮箱</string>
+    <string name="feedback_mail_error">请正确填写邮箱</string>
+    <string name="feedback_success">提交成功</string>
+    <string name="feedback_fail">提交失败</string>
+
 </resources>

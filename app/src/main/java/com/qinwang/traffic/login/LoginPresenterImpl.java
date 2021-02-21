@@ -1,5 +1,9 @@
 package com.qinwang.traffic.login;
 
+import android.content.Context;
+
+import com.qinwang.traffic.R;
+
 /**
  * @Auther:haoyanwang1121@gmail.com
  * @Date:2021/2/5
@@ -11,8 +15,10 @@ public class LoginPresenterImpl implements LoginConstract.LoginPresenter, LoginC
 
     private LoginConstract.LoginView mLoginView;
     private LoginConstract.LoginModel mLoginModel;
+    private Context context;
 
-    public LoginPresenterImpl(LoginConstract.LoginView loginView){
+    public LoginPresenterImpl(Context context, LoginConstract.LoginView loginView){
+        this.context = context;
         this.mLoginView = loginView;
         this.mLoginModel = new LoginModelImpl();
     }
@@ -20,7 +26,7 @@ public class LoginPresenterImpl implements LoginConstract.LoginPresenter, LoginC
     @Override
     public void validateCredentials(String userName, String password) {
         if (mLoginView != null){
-            mLoginView.showLoading("", "登陆中");
+            mLoginView.showLoading("", context.getString(R.string.Loading_login));
         }
         mLoginModel.Login(userName, password, this);
     }
