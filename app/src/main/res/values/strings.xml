@@ -51,4 +51,39 @@
     <string name="feedback_success">提交成功</string>
     <string name="feedback_fail">提交失败</string>
 
+    <!-- UploadFragment -->
+    <string name="car_number">车辆牌号:</string>
+    <string name="car_color">车身颜色:</string>
+    <string name="car_type">车辆类型:</string>
+    <string name="other_type">其他类型:</string>
+    <string name="input_other_type">请输入车辆类型</string>
+    <string name="carBoard_color">车牌颜色:</string>
+    <string name="mistake_time">违法时间:</string>
+    <string name="mistake_place">违法地点:</string>
+    <string name="mistake_describe">违法描述:</string>
+    <string name="police">执法交警:</string>
+    <string name="mistake_uploading">提交</string>
+    
+    <string name="car_big">大型客车</string>
+    <string name="car_small">小型客车</string>
+    <string name="truck_big">大型货车</string>
+    <string name="truck_small">小型货车</string>
+    <string name="motorcycle">摩托车</string>
+    
+    <string name="other">其他</string>
+
+    <string name="color_blue">蓝色</string>
+    <string name="color_yellow">黄色</string>
+    <string name="color_white">白色</string>
+    <string name="color_black">黑色</string>
+    <string name="color_green">绿色</string>
+
+    <string name="errorCarNumber">请填写车辆牌号</string>
+    <string name="errorCarColor">请填写车辆颜色</string>
+    <string name="errorType">请选择车辆类型</string>
+    <string name="errorBoardColor">请选择车牌颜色</string>
+    <string name="errorDescribe">请描述</string>
+
+    <string name="uploading_success">上传成功!!!</string>
+    <string name="uploading_fail">无法上传!!!</string>
 </resources>

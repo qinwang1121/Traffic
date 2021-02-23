@@ -25,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-//        return super.onSupportNavigateUp();
-        NavController controller = Navigation.findNavController(this,R.id.fragment);
-        return controller.navigateUp();
-    }
+//    @Override
+//    public boolean onSupportNavigateUp() {
+////        return super.onSupportNavigateUp();
+//        NavController controller = Navigation.findNavController(this,R.id.fragment);
+//        return controller.navigateUp();
+//    }
+
 }
