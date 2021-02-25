@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.mylhyl.circledialog.CircleDialog;
 import com.qinwang.traffic.R;
+import com.qinwang.traffic.login.LoginActivity;
 import com.qinwang.traffic.main.myself.feedback.FeedbackActivity;
 import com.qinwang.traffic.main.myself.safety.SafetyActivity;
 
@@ -91,6 +92,8 @@ public class MyselfFragment extends Fragment implements View.OnClickListener, My
                     @Override
                     public void onClick(View view) {
                         getActivity().finish();
+                        startActivity(new Intent(getActivity(),
+                                LoginActivity.class));
                     }
                 })
                 .setNegative(getString(R.string.Dialog_false),null)

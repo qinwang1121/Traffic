@@ -33,7 +33,7 @@ public class SearchPresenterImpl implements SearchConstruct.SearchPresenter, Sea
         if (mSearchView != null){
             mSearchView.showLoading("", context.getString(R.string.Loading_search));
         }
-        mSearchModel.Serach(context, Msg, this);
+        mSearchModel.Search(context, Msg, this);
     }
 
     @Override
@@ -47,6 +47,7 @@ public class SearchPresenterImpl implements SearchConstruct.SearchPresenter, Sea
     public void onSuccess(String msg) {
         if (mSearchView != null){
             mSearchView.showToast(msg);
+            mSearchView.showMsgView();
             mSearchView.hideLoading("");
         }
     }

@@ -20,6 +20,10 @@ public interface SearchConstruct {
         void showSearchMsgError();
 
         void showToast(String msg);
+
+        void showMsgView();
+
+        void hideMsgView();
     }
 
     interface SearchModel{
@@ -32,7 +36,7 @@ public interface SearchConstruct {
 
             void onFail(String msg);
         }
-        void Serach(Context context, String Msg, onSearchListener listener);
+        void Search(Context context, String Msg, onSearchListener listener);
     }
 
     interface SearchPresenter{

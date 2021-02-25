@@ -1,7 +1,5 @@
 package com.qinwang.traffic.main.mistake.search;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.qinwang.traffic.R;
@@ -21,6 +19,7 @@ import com.qinwang.traffic.tools.LoadingDialog;
 public class SearchFragment extends Fragment implements SearchConstruct.SearchView, View.OnClickListener {
 
     private EditText SearchMsg;
+    private LinearLayout layoutSearch;
 
     private LoadingDialog mLoadingDialog = null;
 
@@ -46,8 +45,10 @@ public class SearchFragment extends Fragment implements SearchConstruct.SearchVi
 
     public void init(){
         SearchMsg = (EditText) getView().findViewById(R.id.searchMsg);
+        layoutSearch = (LinearLayout) getView().findViewById(R.id.layoutSearch);
         getView().findViewById(R.id.searchBut)
                 .setOnClickListener(this);
+
         mSearchPresenter = new SearchPresenterImpl(getActivity(), this);
     }
 
@@ -88,6 +89,17 @@ public class SearchFragment extends Fragment implements SearchConstruct.SearchVi
         Toast.makeText(getActivity(),
                 msg,
                 Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showMsgView() {
+        getView().findViewById(R.id.layoutMsg).setVisibility(View.VISIBLE);
+        layoutSearch.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void hideMsgView() {
+        layoutSearch.setVisibility(View.VISIBLE);
     }
 
     @Override

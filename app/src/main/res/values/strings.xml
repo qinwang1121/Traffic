@@ -13,6 +13,7 @@
     <string name="menu_mistake">违规</string>
     <string name="menu_main">Home</string>
     <string name="menu_myself">我的</string>
+    <string name="back">再按一次退出程序!</string>
 
     <!-- MistakeFragment -->
     <string name="menu_search">查询</string>
@@ -92,4 +93,14 @@
     <string name="searchMsg">输入车主身份证号或车牌号码</string>
     <string name="searchMsgError">请输入车主身份证号或车牌号码</string>
     <string name="searchFail">查询失败</string>
+
+    <!-- Message -->
+    <string name="carUserName">车主姓名:</string>
+    <string name="carUserSex">性别:</string>
+    <string name="carUserID">身份证号:</string>
+    <string name="carNumber">车辆牌号:</string>
+    <string name="carType">车辆类型:</string>
+    <string name="carName">车辆品牌:</string>
+    <string name="carColor">车身颜色:</string>
+    <string name="carMistake">违章记录:</string>
 </resources>

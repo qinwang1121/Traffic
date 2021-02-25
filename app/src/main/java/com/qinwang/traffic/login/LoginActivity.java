@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity implements LoginConstract.L
     public void navigateToHome() {
         startActivity(new Intent(this,
                 MainActivity.class));
+        finish();
     }
 
     @Override

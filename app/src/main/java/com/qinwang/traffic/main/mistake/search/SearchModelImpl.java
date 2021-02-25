@@ -15,7 +15,7 @@ import com.qinwang.traffic.R;
  */
 public class SearchModelImpl implements SearchConstruct.SearchModel {
     @Override
-    public void Serach(Context context, final String Msg, final onSearchListener listener) {
+    public void Search(Context context, final String Msg, final onSearchListener listener) {
 
         boolean error = false;
         if (TextUtils.isEmpty(Msg)){

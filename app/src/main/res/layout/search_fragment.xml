@@ -2,15 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MsgView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.mistake.search.SearchFragment">
 
     <LinearLayout
+        android:id="@+id/layoutSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|right|center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="visible">
 
         <EditText
             android:id="@+id/searchMsg"
@@ -29,4 +32,12 @@
             android:src="@drawable/search" />
 
     </LinearLayout>
+
+    <include
+        android:id="@+id/layoutMsg"
+        layout="@layout/message_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
 </FrameLayout>
