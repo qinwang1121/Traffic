@@ -48,6 +48,8 @@ public class SearchFragment extends Fragment implements SearchConstruct.SearchVi
         layoutSearch = (LinearLayout) getView().findViewById(R.id.layoutSearch);
         getView().findViewById(R.id.searchBut)
                 .setOnClickListener(this);
+        getView().findViewById(R.id.msgButBack)
+                .setOnClickListener(this);
 
         mSearchPresenter = new SearchPresenterImpl(getActivity(), this);
     }
@@ -99,13 +101,19 @@ public class SearchFragment extends Fragment implements SearchConstruct.SearchVi
 
     @Override
     public void hideMsgView() {
+        getView().findViewById(R.id.layoutMsg).setVisibility(View.GONE);
         layoutSearch.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.searchBut) {
-            mSearchPresenter.validateSearch(SearchMsg.getText().toString());
+        switch (view.getId()){
+            case R.id.searchBut:
+                mSearchPresenter.validateSearch(SearchMsg.getText().toString());
+                break;
+            case R.id.msgButBack:
+                hideMsgView();
+                break;
         }
     }
 }
