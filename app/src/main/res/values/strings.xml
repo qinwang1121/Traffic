@@ -36,6 +36,7 @@
     <string name="Loading_loading">加载中…</string>
     <string name="Loading_login">登录中…</string>
     <string name="Loading_upload">上传中…</string>
+    <string name="Loading_search">查询中…</string>
 
     <!-- FeedbackActivity -->
     <string name="feedback_question">问题描述</string>
@@ -86,4 +87,9 @@
 
     <string name="uploading_success">上传成功!!!</string>
     <string name="uploading_fail">无法上传!!!</string>
+
+    <!-- SearchFragment -->
+    <string name="searchMsg">输入车主身份证号或车牌号码</string>
+    <string name="searchMsgError">请输入车主身份证号或车牌号码</string>
+    <string name="searchFail">查询失败</string>
 </resources>
