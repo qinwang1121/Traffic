@@ -7,7 +7,7 @@ package com.qinwang.traffic.login;
  * @Version:1.0
  * @function:
  */
-public interface LoginConstract {
+public interface LoginConstruct {
 
     interface LoginView{
 

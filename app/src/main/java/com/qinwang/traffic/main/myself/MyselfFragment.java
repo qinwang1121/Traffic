@@ -21,8 +21,6 @@ import com.qinwang.traffic.main.myself.safety.SafetyActivity;
 
 public class MyselfFragment extends Fragment implements View.OnClickListener, MyselfView {
 
-    private MyselfViewModel mViewModel;
-
     public static MyselfFragment newInstance() {
         return new MyselfFragment();
     }
@@ -36,7 +34,6 @@ public class MyselfFragment extends Fragment implements View.OnClickListener, My
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MyselfViewModel.class);
         // TODO: Use the ViewModel
 
         getView().findViewById(R.id.myself_safety)

@@ -13,7 +13,7 @@ import com.qinwang.traffic.R;
  * @Version:1.0
  * @function:
  */
-public class UploadingModeImpl implements UploadingConstract.UploadingModel {
+public class UploadingModeImpl implements UploadingConstruct.UploadingModel {
     @Override
     public void uploading(final Context context, final String carNumber, final String carColor, final String carType, final String boardColor,
                           String mistakeTime, String mistakePlace, final String mistakeDescribe, String policeName, final onUploadingListener listener) {

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 
 import com.qinwang.traffic.R;
-import com.qinwang.traffic.main.MainActivity;
 
 /**
  * @Auther:haoyanwang1121@gmail.com
@@ -13,13 +12,13 @@ import com.qinwang.traffic.main.MainActivity;
  * @Version:1.0
  * @function:
  */
-public class FeedbackPresenterImpl implements FeedbackConstract.FeedbackPresenter, FeedbackConstract.FeedbackModel.onFeedbackListener {
+public class FeedbackPresenterImpl implements FeedbackConstruct.FeedbackPresenter, FeedbackConstruct.FeedbackModel.onFeedbackListener {
 
-    private FeedbackConstract.FeedbackView mFeedbackView;
-    private FeedbackConstract.FeedbackModel mFeedbackModel;
+    private FeedbackConstruct.FeedbackView mFeedbackView;
+    private FeedbackConstruct.FeedbackModel mFeedbackModel;
     private Context context;
 
-    public FeedbackPresenterImpl( Context context, FeedbackConstract.FeedbackView mFeedbackView){
+    public FeedbackPresenterImpl( Context context, FeedbackConstruct.FeedbackView mFeedbackView){
         this.context = context;
         this.mFeedbackView = mFeedbackView;
         this.mFeedbackModel = new FeedbackModelImpl();

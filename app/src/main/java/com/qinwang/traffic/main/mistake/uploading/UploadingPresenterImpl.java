@@ -12,13 +12,13 @@ import com.qinwang.traffic.R;
  * @Version:1.0
  * @function:
  */
-public class UploadingPresenterImpl implements UploadingConstract.UploadingPresenter, UploadingConstract.UploadingModel.onUploadingListener {
+public class UploadingPresenterImpl implements UploadingConstruct.UploadingPresenter, UploadingConstruct.UploadingModel.onUploadingListener {
 
     private Context context;
-    private UploadingConstract.UploadingView uploadingView;
-    private UploadingConstract.UploadingModel uploadingModel;
+    private UploadingConstruct.UploadingView uploadingView;
+    private UploadingConstruct.UploadingModel uploadingModel;
 
-    public UploadingPresenterImpl(Context context, UploadingConstract.UploadingView uploadingView){
+    public UploadingPresenterImpl(Context context, UploadingConstruct.UploadingView uploadingView){
         this.context = context;
         this.uploadingView = uploadingView;
         uploadingModel = new UploadingModeImpl();

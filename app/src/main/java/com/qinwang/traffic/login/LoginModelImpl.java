@@ -10,7 +10,7 @@ import android.text.TextUtils;
  * @Version:1.0
  * @function:
  */
-public class LoginModelImpl implements LoginConstract.LoginModel {
+public class LoginModelImpl implements LoginConstruct.LoginModel {
     @Override
     public void Login(final String userName, final String passWord, final onLoginListener listener) {
         new Handler().postDelayed(new Runnable() {

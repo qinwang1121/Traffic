@@ -27,7 +27,7 @@ import com.qinwang.traffic.tools.LoadingDialog;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class UploadingFragment extends Fragment implements UploadingConstract.UploadingView{
+public class UploadingFragment extends Fragment implements UploadingConstruct.UploadingView{
 
     private final String TAG = "UploadingFragment";
 
@@ -41,7 +41,7 @@ public class UploadingFragment extends Fragment implements UploadingConstract.Up
     private TextView spaceType, spaceColor;
 
     private LoadingDialog mLoadingDialog = null;
-    private UploadingConstract.UploadingPresenter mUploadingPresenter;
+    private UploadingConstruct.UploadingPresenter mUploadingPresenter;
 
     private String carType = null, boardColor = null;
 

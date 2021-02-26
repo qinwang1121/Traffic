@@ -103,4 +103,13 @@
     <string name="carName">车辆品牌:</string>
     <string name="carColor">车身颜色:</string>
     <string name="carMistake">违章记录:</string>
+
+    <!-- SafetyActivity -->
+    <string name="userName">姓名:</string>
+    <string name="userGander">性别:</string>
+    <string name="userId">身份证号:</string>
+    <string name="userPassword">密码:</string>
+    <string name="userTel">电话:</string>
+    <string name="userHome">住址:</string>
+    <string name="makeSure">确定</string>
 </resources>

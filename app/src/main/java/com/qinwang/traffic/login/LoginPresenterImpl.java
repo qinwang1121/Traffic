@@ -11,13 +11,13 @@ import com.qinwang.traffic.R;
  * @Version:1.0
  * @function:
  */
-public class LoginPresenterImpl implements LoginConstract.LoginPresenter, LoginConstract.LoginModel.onLoginListener {
+public class LoginPresenterImpl implements LoginConstruct.LoginPresenter, LoginConstruct.LoginModel.onLoginListener {
 
-    private LoginConstract.LoginView mLoginView;
-    private LoginConstract.LoginModel mLoginModel;
+    private LoginConstruct.LoginView mLoginView;
+    private LoginConstruct.LoginModel mLoginModel;
     private Context context;
 
-    public LoginPresenterImpl(Context context, LoginConstract.LoginView loginView){
+    public LoginPresenterImpl(Context context, LoginConstruct.LoginView loginView){
         this.context = context;
         this.mLoginView = loginView;
         this.mLoginModel = new LoginModelImpl();

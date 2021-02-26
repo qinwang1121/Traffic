@@ -10,7 +10,7 @@ import android.view.View;
  * @Version:1.0
  * @function:
  */
-public interface UploadingConstract {
+public interface UploadingConstruct {
 
     interface UploadingView{
         void showLoading(String tag, String msg);//显示加载动画

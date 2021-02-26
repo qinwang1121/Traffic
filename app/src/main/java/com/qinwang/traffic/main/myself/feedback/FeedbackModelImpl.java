@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * @Version:1.0
  * @function:
  */
-public class FeedbackModelImpl implements FeedbackConstract.FeedbackModel {
+public class FeedbackModelImpl implements FeedbackConstruct.FeedbackModel {
     @Override
     public void Feedback(final Context context, final String Email, final String message, final onFeedbackListener listener) {
         new Handler().postDelayed(new Runnable() {

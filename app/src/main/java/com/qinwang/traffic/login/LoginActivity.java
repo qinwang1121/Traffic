@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,12 +19,12 @@ import com.qinwang.traffic.main.MainActivity;
 import com.qinwang.traffic.tools.LoadingDialog;
 import com.qinwang.traffic.tools.WindowAssistant;
 
-public class LoginActivity extends AppCompatActivity implements LoginConstract.LoginView, View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements LoginConstruct.LoginView, View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
 
     private LoadingDialog mLoadingDialog = null;
-    private LoginConstract.LoginPresenter mLoginPresenter;
+    private LoginConstruct.LoginPresenter mLoginPresenter;
 
     private WindowAssistant windowAssistant = new WindowAssistant();
     public int width, height;

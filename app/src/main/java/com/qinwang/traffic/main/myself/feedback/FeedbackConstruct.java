@@ -10,7 +10,7 @@ import android.view.View;
  * @Version:1.0
  * @function:
  */
-public interface FeedbackConstract {
+public interface FeedbackConstruct {
 
     interface FeedbackView{
 

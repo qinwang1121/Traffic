@@ -16,12 +16,12 @@ import com.mylhyl.circledialog.CircleDialog;
 import com.qinwang.traffic.R;
 import com.qinwang.traffic.tools.LoadingDialog;
 
-public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener, FeedbackConstract.FeedbackView {
+public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener, FeedbackConstruct.FeedbackView {
 
     private static final int MAX_NUM = 200;
     private TextView feedback_size, toolbar_title;
     private EditText feedback_text, feedback_email;
-    private FeedbackConstract.FeedbackPresenter mFeedbackPresenter;
+    private FeedbackConstruct.FeedbackPresenter mFeedbackPresenter;
     private LoadingDialog mLoadingDialog = null;
 
     @Override
